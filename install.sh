@@ -54,14 +54,4 @@ do
 done
 echo "(4/4) ✅ Linked dotfiles."
 
-# Install Ultimate vimrc
-# echo "(4/4) λ Installing Ultimate vimrc"
-# if [ -d ~/.vim_runtime ]; then
-#   echo "Found ~/.vim_runtime -> skipping this step"
-# else
-#   git clone --depth=1 https://github.com/adamklingbaum/vimrc.git ~/.vim_runtime
-#   sh ~/.vim_runtime/install_awesome_vimrc.sh
-# fi
-# echo "(4/4) ✅ Installed Ultimate vimrc."
-
 echo "✅ Installation complete."

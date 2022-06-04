@@ -18,8 +18,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 nnoremap <Leader>m :ALEDetail<CR>
 
-vnoremap <leader>yy   "+y "copying outside vim
-noremap  <leader>pp   "+p "pasting inside vim from outside
+vnoremap <leader>yy "+y
+noremap  <leader>pp "+p
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -49,7 +49,7 @@ set wildmenu
 
 syntax on
 filetype plugin indent on
-color desert
+color default
 
 " Vim Plug: https://github.com/junegunn/vim-plug
 call plug#begin()
@@ -66,18 +66,6 @@ Plug 'w0rp/ale'
 Plug 'vim-ruby/vim-ruby'
 
 call plug#end()
-
-" --column: Show column number
-" --line-number: Show line number
-" --no-heading: Do not show file headings in results
-" --fixed-strings: Search term as a literal string
-" --ignore-case: Case insensitive search
-" --no-ignore: Do not respect .gitignore, etc...
-" --hidden: Search hidden files and folders
-" --follow: Follow symlinks
-" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-" --color: Search color options
-" command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 "Fzf customization
 let s:fzf_custom_opts = { 'options': '--tiebreak=end,length,index' }
