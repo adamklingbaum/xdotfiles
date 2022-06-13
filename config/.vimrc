@@ -66,6 +66,7 @@ Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'nanotech/jellybeans.vim', { 'as': 'jellybeans' }
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 set autoindent
