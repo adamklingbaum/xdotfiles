@@ -58,7 +58,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 :set autoindent
-:set cliboard+=unnamed
+:set clipboard+=unnamed
 :set tabstop=2
 :set shiftwidth=2
 :set number
