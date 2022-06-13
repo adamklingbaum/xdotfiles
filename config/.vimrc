@@ -57,23 +57,23 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-:set autoindent
-:set clipboard+=unnamed
-:set tabstop=2
-:set shiftwidth=2
-:set number
-:syntax on
-:color elflord
+set autoindent
+set clipboard+=unnamedplus
+set tabstop=2
+set shiftwidth=2
+set number
+syntax on
+color elflord
 
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 
-nnoremap <C-f> :Files<Cr>
-nnoremap <C-g> :Rg<Cr>
-vnoremap <Leader>yy   "+y
-noremap  <Leader>pp   "+p
+nnoremap <C-y> "+y
+vnoremap <C-y> "+y
+nnoremap <C-p> "+gP
+vnoremap <C-p> "+gP
 
 call plug#begin()
 Plug 'junegunn/fzf'
