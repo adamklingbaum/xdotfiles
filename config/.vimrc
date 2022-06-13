@@ -75,6 +75,8 @@ nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
+nnoremap <C-f> :Files<Cr>
+nnoremap <C-g> :Rg<Cr>
 
 call plug#begin()
 Plug 'junegunn/fzf'
