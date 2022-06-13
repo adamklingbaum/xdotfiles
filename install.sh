@@ -20,28 +20,13 @@ fi
 if [ -f ~/.vimrc ]; then
   rm -f ~/.vimrc
 fi
-
 echo "(2/4) ✅ Cleared local vim config."
 
-# Install ripgrep
-echo "(3/4) λ Installing ripgrep"
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  if ! which brew > /dev/null; then
-    echo ">> Installing homebrew"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  fi;
-
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-
-  echo ">> Installing via brew"
-  brew install ripgrep
-else
-  echo '>> Installing via apt-get'
-  sudo apt-get install -y ripgrep
-fi
-
-echo "(3/4) ✅ Linked dotfiles."
+# Install vim-pluf
+echo "(3/4) λ vim-plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+echo "(3/4) ✅ Installed vim-plug."
 
 # Link dotfiles
 echo "(4/4) λ Linking dotfiles"
