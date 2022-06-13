@@ -72,13 +72,13 @@ let g:ale_lint_on_insert_leave = 1
 
 nnoremap <C-f> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
-vnoremap <leader>yy   "+y
-noremap  <leader>pp   "+p
+vnoremap <Leader>yy   "+y
+noremap  <Leader>pp   "+p
 
 call plug#begin()
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-ruby'
+Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
 call plug#end()
