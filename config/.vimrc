@@ -50,3 +50,26 @@ augroup END
 if has('syntax') && has('eval')
   packadd! matchit
 endif
+
+:set autoindent
+:set tabstop=2
+:set shiftwidth=2
+:set number
+:syntax on
+:color elflord
+
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '•'
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+
+nnoremap <C-f> :Files<Cr>
+nnoremap <C-g> :Rg<Cr>
+
+call plug#begin()
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-ruby'
+Plug 'w0rp/ale'
+call plug#end()
