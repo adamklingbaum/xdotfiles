@@ -69,6 +69,7 @@ let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
+let g:airline#extensions#tabline#enabled = 1
 
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
@@ -81,4 +82,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
