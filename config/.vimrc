@@ -57,13 +57,25 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+call plug#begin()
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'nanotech/jellybeans.vim', { 'as': 'jellybeans' }
+call plug#end()
+
 set autoindent
 set clipboard+=unnamedplus
 set tabstop=2
 set shiftwidth=2
 set number
+
 syntax on
-color elflord
+color jellybeans
 
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
@@ -77,13 +89,3 @@ nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
 nnoremap <C-f> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
-
-call plug#begin()
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
-Plug 'w0rp/ale'
-Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim', { 'as': 'dracula' }
-call plug#end()
