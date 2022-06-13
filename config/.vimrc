@@ -68,7 +68,7 @@ nnoremap <C-g> :Rg<Cr>
 
 call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-ruby'
 Plug 'w0rp/ale'
