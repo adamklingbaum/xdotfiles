@@ -76,7 +76,6 @@ set shiftwidth=2
 set number
 
 syntax on
-color jellybeans
 
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
@@ -85,7 +84,6 @@ let g:ale_lint_on_insert_leave = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:jellybeans_use_term_italics = 1
 let g:jellybeans_use_lowcolor_black = 1
-set guifont=Monaco:h10 noanti
 
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
@@ -93,3 +91,7 @@ nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
 nnoremap <C-f> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
+
+let g:dracula_italic = 0
+colorscheme dracula
+highlight Normal ctermbg=None
