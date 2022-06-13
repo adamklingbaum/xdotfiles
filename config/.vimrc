@@ -82,6 +82,8 @@ let g:ale_sign_warning = '•'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:jellybeans_use_term_italics = 1
+let g:jellybeans_use_lowcolor_black = 1
 
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
