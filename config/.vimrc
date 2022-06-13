@@ -92,6 +92,5 @@ vnoremap <C-p> "+gP
 nnoremap <C-f> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
 
-let g:dracula_italic = 0
 colorscheme dracula
 highlight Normal ctermbg=None
