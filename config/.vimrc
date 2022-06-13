@@ -71,6 +71,8 @@ let g:ale_lint_on_insert_leave = 1
 
 nnoremap <C-f> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
+vnoremap <leader>yy   "+y
+noremap  <leader>pp   "+p
 
 call plug#begin()
 Plug 'junegunn/fzf'
