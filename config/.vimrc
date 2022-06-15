@@ -74,8 +74,10 @@ set clipboard+=unnamedplus
 set tabstop=2
 set shiftwidth=2
 set number
+set ruler
 
 syntax on
+filetype plugin indent on
 
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
@@ -93,4 +95,3 @@ nnoremap <C-f> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
 
 colorscheme dracula
-highlight Normal ctermbg=None
