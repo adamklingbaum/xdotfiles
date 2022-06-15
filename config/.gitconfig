@@ -1,1 +1,7 @@
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+[diff]
+  algorithm = patience
+  oprefix = true
 
