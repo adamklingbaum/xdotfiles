@@ -95,3 +95,4 @@ nnoremap <C-f> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
 
 colorscheme dracula
+highlight Normal ctermbg=None
