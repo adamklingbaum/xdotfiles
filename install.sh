@@ -45,7 +45,7 @@ echo "(3/4) ✅ Insatlled ripgrep."
 
 # Link dotfiles
 echo "(4/4) λ Linking dotfiles"
-dotfiles=(.zshrc .vimrc)
+dotfiles=(.zshrc .vimrc .gitignore_global .gitconfig)
 for file in "${dotfiles[@]}"
 do
   echo "λ Linking ${file}"
