@@ -51,7 +51,7 @@ for file in "${dotfiles[@]}"
 do
   echo "λ Linking ${file}"
   rm -f ~/$file
-  ln -s ~/dotfiles/config/$file ~/$file
+  ln -s ~/dotfiles//$file ~/$file
 done
 
 echo "✅ Linked dotfiles."
