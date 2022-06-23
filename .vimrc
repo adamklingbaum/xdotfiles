@@ -28,9 +28,6 @@ set ignorecase smartcase
 set incsearch
 set shiftround
 
-syntax on
-filetype plugin indent on
-
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
 let g:ale_lint_on_text_changed = 'normal'
@@ -52,10 +49,13 @@ noremap  <leader>nh   :nohl<cr>
 vnoremap <leader>yy   "+y
 noremap  <leader>pp   "+p
 
-highlight Normal ctermbg=None
+
 autocmd VimResized * :wincmd =
 
 command! Q  q
 command! Wq wq
 
 colorscheme dracula
+highlight Normal ctermbg=None
+syntax on
+filetype plugin indent on
