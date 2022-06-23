@@ -88,7 +88,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install neovim
 else
   echo '>> Installing via apt-get'
-  sudo apt-get install neovim
+  sudo apt-get -y install neovim
 fi
 
 echo "✅ Installed neovim."
