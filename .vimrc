@@ -13,22 +13,23 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'nanotech/jellybeans.vim', { 'as': 'jellybeans' }
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
 set autoindent
-set clipboard+=unnamedplus
 set tabstop=2
 set shiftwidth=2
 set number
 set ruler
+set hlsearch
+set ignorecase smartcase
+set incsearch
+set shiftround
 
 syntax on
 filetype plugin indent on
-
-autocmd VimResized * :wincmd =
 
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
@@ -38,12 +39,19 @@ let g:airline#extensions#tabline#enabled = 1
 let g:jellybeans_use_term_italics = 1
 let g:jellybeans_use_lowcolor_black = 1
 
-nnoremap <C-y> "+y
-vnoremap <C-y> "+y
-nnoremap <C-p> "+gP
-vnoremap <C-p> "+gP
-nnoremap <C-f> :Files<Cr>
-nnoremap <C-g> :Rg<Cr>
+let mapleader = ","
+
+" Ripgrep stuff
+noremap  <leader>,    :Files<cr>
+noremap  <leader>fw   :Rg <C-r><C-w>
+
+" No highlight
+noremap  <leader>nh   :nohl<cr>
+
+" Copy and paste clipboard
+vnoremap <leader>yy   "+y
+noremap  <leader>pp   "+p
 
 colorscheme dracula
 highlight Normal ctermbg=None
+autocmd VimResized * :wincmd =
