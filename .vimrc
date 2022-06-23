@@ -55,7 +55,9 @@ autocmd VimResized * :wincmd =
 command! Q  q
 command! Wq wq
 
-colorscheme dracula
-highlight Normal ctermbg=None
 syntax on
 filetype plugin indent on
+colorscheme dracula
+highlight Normal ctermbg=None
+
+
