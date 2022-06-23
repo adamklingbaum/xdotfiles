@@ -52,6 +52,10 @@ noremap  <leader>nh   :nohl<cr>
 vnoremap <leader>yy   "+y
 noremap  <leader>pp   "+p
 
-colorscheme dracula
 highlight Normal ctermbg=None
 autocmd VimResized * :wincmd =
+
+command! Q  q
+command! Wq wq
+
+colorscheme dracula
